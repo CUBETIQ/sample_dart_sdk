@@ -7,7 +7,9 @@ abstract class BaseModel<T> {
 
   T fromMap(Map<String, dynamic> map);
 
-  T fromJson(String json);
+  T fromJson(String json) {
+    return fromMap(decode(json));
+  }
 
   @override
   String toString() {

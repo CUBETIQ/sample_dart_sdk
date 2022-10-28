@@ -29,10 +29,5 @@ class Product extends BaseModel<Product> {
     };
   }
 
-  @override
-  Product fromJson(String json) {
-    return fromMap(decode(json));
-  }
-
   static Product fromJsonString(String json) => Product().fromJson(json);
 }

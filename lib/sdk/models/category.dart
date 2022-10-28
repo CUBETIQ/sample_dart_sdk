@@ -25,10 +25,5 @@ class Category extends BaseModel<Category> {
     };
   }
 
-  @override
-  Category fromJson(String json) {
-    return fromMap(decode(json));
-  }
-
   static Category fromJsonString(dynamic json) => Category().fromJson(json);
 }
